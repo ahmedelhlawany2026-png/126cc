@@ -1,16 +1,24 @@
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? '';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? '';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 /**
  * Auth-aware server client for use inside Server Components and Route
  * Handlers (e.g. the admin layout, checking whether a user is logged in).
  * Reads the session cookie that middleware.ts and the browser client keep in
  * sync — do not use this for public pages, use lib/supabase.ts instead.
+ *
+ * Throws a clear error only when actually called, so importing this module
+ * never crashes a build that's missing the Supabase env vars.
  */
 export function createSupabaseServerClient() {
+  if (!supabaseUrl || !supabaseAnonKey) {
+    throw new Error(
+      'Supabase is not configured: set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY in your environment variables.'
+    );
+  }
   const cookieStore = cookies();
 
   return createServerClient(supabaseUrl, supabaseAnonKey, {
