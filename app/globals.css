@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cairo: 'Cairo', sans-serif;
+  --font-tajawal: 'Tajawal', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F8F8F8;
+  color: #2F2F2F;
+  font-family: var(--font-tajawal);
+  -webkit-font-smoothing: antialiased;
+}
+
+html[lang='en'] body {
+  font-family: var(--font-inter);
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-cairo);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+html[lang='en'] h1,
+html[lang='en'] h2,
+html[lang='en'] h3,
+html[lang='en'] .display {
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@keyframes wa-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55), 0 4px 14px rgba(0, 0, 0, 0.2); }
+  50% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0), 0 4px 14px rgba(0, 0, 0, 0.2); }
+}
+
+@keyframes wa-ping {
+  0% { opacity: 0.55; transform: scale(1); }
+  75%, 100% { opacity: 0; transform: scale(1.6); }
+}

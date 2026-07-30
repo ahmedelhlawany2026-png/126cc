@@ -1,0 +1,83 @@
+export interface TeamMember {
+  nameAr: string; nameEn: string;
+  roleAr: string; roleEn: string;
+  deptKey: string; deptAr: string; deptEn: string;
+  image: string | null;
+}
+
+export const departments: { key: string; ar: string; en: string }[] = [
+  { key: 'project-management', ar: 'إدارة المشروعات والإشراف الهندسي', en: 'Project Management & Engineering Supervision' },
+  { key: 'marketing', ar: 'التسويق', en: 'Marketing' },
+  { key: 'consultancy', ar: 'الاستشارات الهندسية', en: 'Engineering Consultancy' },
+  { key: 'design', ar: 'التصميم والرسم الهندسي', en: 'Design & Drafting' },
+  { key: 'quality', ar: 'إدارة الجودة', en: 'Quality' },
+  { key: 'purchasing', ar: 'إدارة المشتريات', en: 'Purchasing' },
+  { key: 'audit', ar: 'إدارة المراجعة', en: 'Audit' },
+  { key: 'warehouses', ar: 'إدارة المخازن', en: 'Warehouses' },
+  { key: 'transportation', ar: 'إدارة النقل', en: 'Transportation' },
+  { key: 'finance', ar: 'الإدارة المالية', en: 'Finance' },
+  { key: 'legal', ar: 'الإدارة القانونية', en: 'Legal' },
+];
+
+export const topManagement: TeamMember[] = [
+  { nameAr: 'أحمد عبدالله', nameEn: 'أحمد عبدالله', roleAr: 'رئيس مجلس الإدارة', roleEn: 'Chairman', deptKey: 'chairman', deptAr: '', deptEn: '', image: null },
+  { nameAr: 'معتز الدباح', nameEn: 'معتز الدباح', roleAr: 'مدير إدارة المشروعات', roleEn: 'Project Management Director', deptKey: 'pm-director', deptAr: '', deptEn: '', image: null },
+  { nameAr: 'اسلام فرغلي', nameEn: 'اسلام فرغلي', roleAr: 'مدير إدارة الجودة', roleEn: 'Quality Director', deptKey: 'qc-director', deptAr: '', deptEn: '', image: null },
+];
+
+export const teamMembers: TeamMember[] = [
+  { nameAr: 'سامي عبدالستار', nameEn: 'سامي عبدالستار', roleAr: 'مدير مشاريع', roleEn: 'Project Manager', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member001.png' },
+  { nameAr: 'اسلام اشرف', nameEn: 'اسلام اشرف', roleAr: 'مراقب مهندسين', roleEn: 'Engineering Supervisor', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member002.jpg' },
+  { nameAr: 'محمد سعيد', nameEn: 'محمد سعيد', roleAr: 'مراقب مهندسين', roleEn: 'Engineering Supervisor', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member003.jpg' },
+  { nameAr: 'احمد حسن', nameEn: 'احمد حسن', roleAr: 'مراقب مهندسين', roleEn: 'Engineering Supervisor', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member004.png' },
+  { nameAr: 'باسم بهاء', nameEn: 'باسم بهاء', roleAr: 'مدير مشاريع', roleEn: 'Project Manager', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member005.png' },
+  { nameAr: 'محمود سكران', nameEn: 'محمود سكران', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member006.jpg' },
+  { nameAr: 'حسام مصطفي', nameEn: 'حسام مصطفي', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member007.png' },
+  { nameAr: 'محمود عصفور', nameEn: 'محمود عصفور', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member008.jpg' },
+  { nameAr: 'مصطفي متولي', nameEn: 'مصطفي متولي', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member009.jpg' },
+  { nameAr: 'محمد شاكر', nameEn: 'محمد شاكر', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member010.png' },
+  { nameAr: 'عمر سيد', nameEn: 'عمر سيد', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member011.jpg' },
+  { nameAr: 'محمد ضياء', nameEn: 'محمد ضياء', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member012.png' },
+  { nameAr: 'محمود الحجار', nameEn: 'محمود الحجار', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member013.png' },
+  { nameAr: 'عمر ايهاب', nameEn: 'عمر ايهاب', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member014.png' },
+  { nameAr: 'ماجد عبد الوهاب', nameEn: 'ماجد عبد الوهاب', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member015.png' },
+  { nameAr: 'مروان الصاوي', nameEn: 'مروان الصاوي', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member016.png' },
+  { nameAr: 'محمد خضر', nameEn: 'محمد خضر', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member017.png' },
+  { nameAr: 'عادل يسري', nameEn: 'عادل يسري', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member018.png' },
+  { nameAr: 'محمد سلامه', nameEn: 'محمد سلامه', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member019.png' },
+  { nameAr: 'خالد زكريا', nameEn: 'خالد زكريا', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member020.png' },
+  { nameAr: 'محمد عمر', nameEn: 'محمد عمر', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member021.png' },
+  { nameAr: 'محمد سامي', nameEn: 'محمد سامي', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member022.png' },
+  { nameAr: 'حازم زكي', nameEn: 'حازم زكي', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member023.png' },
+  { nameAr: 'محمد حسني', nameEn: 'محمد حسني', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member024.png' },
+  { nameAr: 'احمد مدحت', nameEn: 'احمد مدحت', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member025.png' },
+  { nameAr: 'ابراهيم عبد الصمد', nameEn: 'ابراهيم عبد الصمد', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member026.png' },
+  { nameAr: 'محمد الشال', nameEn: 'محمد الشال', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'project-management', deptAr: 'إدارة المشروعات والإشراف الهندسي', deptEn: 'Project Management & Engineering Supervision', image: '/images/team/member027.png' },
+  { nameAr: 'يوسف احمد', nameEn: 'يوسف احمد', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'marketing', deptAr: 'التسويق', deptEn: 'Marketing', image: '/images/team/member028.png' },
+  { nameAr: 'محمد سامي', nameEn: 'محمد سامي', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'marketing', deptAr: 'التسويق', deptEn: 'Marketing', image: '/images/team/member029.png' },
+  { nameAr: 'احمد كزارة', nameEn: 'احمد كزارة', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'consultancy', deptAr: 'الاستشارات الهندسية', deptEn: 'Engineering Consultancy', image: '/images/team/member030.png' },
+  { nameAr: 'محمد هشام', nameEn: 'محمد هشام', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'consultancy', deptAr: 'الاستشارات الهندسية', deptEn: 'Engineering Consultancy', image: '/images/team/member031.png' },
+  { nameAr: 'يحيا زكريا', nameEn: 'يحيا زكريا', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'consultancy', deptAr: 'الاستشارات الهندسية', deptEn: 'Engineering Consultancy', image: null },
+  { nameAr: 'محمد سامي عبد الحق', nameEn: 'محمد سامي عبد الحق', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'design', deptAr: 'التصميم والرسم الهندسي', deptEn: 'Design & Drafting', image: '/images/team/member032.png' },
+  { nameAr: 'محمد سامي محمود', nameEn: 'محمد سامي محمود', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'design', deptAr: 'التصميم والرسم الهندسي', deptEn: 'Design & Drafting', image: '/images/team/member033.png' },
+  { nameAr: 'عبدالرحمن هشام', nameEn: 'عبدالرحمن هشام', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'design', deptAr: 'التصميم والرسم الهندسي', deptEn: 'Design & Drafting', image: '/images/team/member034.png' },
+  { nameAr: 'احمد فتحي', nameEn: 'احمد فتحي', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'design', deptAr: 'التصميم والرسم الهندسي', deptEn: 'Design & Drafting', image: '/images/team/member035.png' },
+  { nameAr: 'عبدالله احمد', nameEn: 'عبدالله احمد', roleAr: 'مهندس', roleEn: 'Engineer', deptKey: 'design', deptAr: 'التصميم والرسم الهندسي', deptEn: 'Design & Drafting', image: '/images/team/member036.png' },
+  { nameAr: 'سامي محمود', nameEn: 'سامي محمود', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'quality', deptAr: 'إدارة الجودة', deptEn: 'Quality', image: '/images/team/member037.png' },
+  { nameAr: 'اشرف الشال', nameEn: 'اشرف الشال', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'purchasing', deptAr: 'إدارة المشتريات', deptEn: 'Purchasing', image: '/images/team/member038.png' },
+  { nameAr: 'هشام ابراهيم', nameEn: 'هشام ابراهيم', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'purchasing', deptAr: 'إدارة المشتريات', deptEn: 'Purchasing', image: '/images/team/member039.png' },
+  { nameAr: 'محمد وفاء', nameEn: 'محمد وفاء', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'audit', deptAr: 'إدارة المراجعة', deptEn: 'Audit', image: '/images/team/member040.png' },
+  { nameAr: 'محمد طارق', nameEn: 'محمد طارق', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'audit', deptAr: 'إدارة المراجعة', deptEn: 'Audit', image: '/images/team/member041.png' },
+  { nameAr: 'طارق ركابي', nameEn: 'طارق ركابي', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'warehouses', deptAr: 'إدارة المخازن', deptEn: 'Warehouses', image: '/images/team/member042.png' },
+  { nameAr: 'احمد طلعت', nameEn: 'احمد طلعت', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'warehouses', deptAr: 'إدارة المخازن', deptEn: 'Warehouses', image: '/images/team/member043.png' },
+  { nameAr: 'عبد الله احمد', nameEn: 'عبد الله احمد', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'transportation', deptAr: 'إدارة النقل', deptEn: 'Transportation', image: '/images/team/member044.png' },
+  { nameAr: 'بلال محمد', nameEn: 'بلال محمد', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'transportation', deptAr: 'إدارة النقل', deptEn: 'Transportation', image: '/images/team/member045.png' },
+  { nameAr: 'احمد فتحي', nameEn: 'احمد فتحي', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'transportation', deptAr: 'إدارة النقل', deptEn: 'Transportation', image: '/images/team/member046.png' },
+  { nameAr: 'احمد صابر', nameEn: 'احمد صابر', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'finance', deptAr: 'الإدارة المالية', deptEn: 'Finance', image: '/images/team/member047.png' },
+  { nameAr: 'محمد مجدي', nameEn: 'محمد مجدي', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'finance', deptAr: 'الإدارة المالية', deptEn: 'Finance', image: '/images/team/member048.png' },
+  { nameAr: 'باسم ياسر', nameEn: 'باسم ياسر', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'finance', deptAr: 'الإدارة المالية', deptEn: 'Finance', image: '/images/team/member049.png' },
+  { nameAr: 'محمد رفاعي', nameEn: 'محمد رفاعي', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'finance', deptAr: 'الإدارة المالية', deptEn: 'Finance', image: '/images/team/member050.png' },
+  { nameAr: 'احمد صلاح', nameEn: 'احمد صلاح', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'finance', deptAr: 'الإدارة المالية', deptEn: 'Finance', image: '/images/team/member051.png' },
+  { nameAr: 'احمد بشاره', nameEn: 'احمد بشاره', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'legal', deptAr: 'الإدارة القانونية', deptEn: 'Legal', image: '/images/team/member052.png' },
+  { nameAr: 'عبد الفتاح سامي', nameEn: 'عبد الفتاح سامي', roleAr: 'موظف', roleEn: 'Officer', deptKey: 'legal', deptAr: 'الإدارة القانونية', deptEn: 'Legal', image: '/images/team/member053.png' },
+];
